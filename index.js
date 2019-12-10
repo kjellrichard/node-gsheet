@@ -1,1 +1,1 @@
-module.exports = require('./lib/merge');
+module.exports = require('./lib/gsheet');

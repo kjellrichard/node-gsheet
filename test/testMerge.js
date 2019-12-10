@@ -1,5 +1,5 @@
 const { expect, should } = require('chai');
-const { merge, getRows } = require('../lib/merge');
+const { merge, getRows } = require('../lib/gsheet');
 const config = {
     creds: require('../.cred/spreadsheet-test-4ce4a41fdfa9.json'),
     spreadsheetId: '1dk8k4L30_2UJdvfkTw7bw2FD6RGaooVPLMTt7-CMdKw',
@@ -27,7 +27,7 @@ describe('merge', () => {
             { name: 'Jack', born: 1967, height: 176, gender: 'male' },
             { name: 'June', born: 1982, height: 160, gender: 'female' },
             { name: 'John', born: 1973, height: 190, gender: 'male' },
-            { name: 'Mary', born: 1977, height: 163, gender: 'female' },
+            { name: 'Mary', born: 1957, height: 168, gender: 'female' },
             { name: 'May', born: 1943, gender: 'female' }
         ];
         const res = await merge(Object.assign({}, config, { data: data }));
@@ -38,5 +38,12 @@ describe('merge', () => {
         
         expect(rows).to.have.lengthOf(6);
         expect(dataTotalBorn).to.be.equal(totalBorn);        
+    })
+})
+
+describe('file merge', () => {
+    it('should read data from file', async () => {
+        const r = await merge(Object.assign({}, config, { csvFile: __dirname + '/people.csv' }));
+        expect(r).to.not.be(null);
     })
 })
