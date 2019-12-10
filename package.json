@@ -1,0 +1,35 @@
+{
+  "name": "node-gsheet",
+  "version": "1.0.0",
+  "description": "Handy functions for reading and merging data into Google Spreadsheet",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit --timeout 30000 --recursive ./test/**/test*"
+  },
+  "author": "Richard B",
+  "license": "MIT",
+  "dependencies": {
+    "google-spreadsheet": "^2.0.8",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "keywords": [
+    "google",
+    "spreadsheet",
+    "gsheet"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjellrichard/node-gsheet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kjellrichard/node-gsheet/issues"
+  },
+  "homepage": "https://github.com/kjellrichard/node-gsheet#readme"
+}
