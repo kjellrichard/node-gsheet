@@ -14,11 +14,11 @@ async function getCreds(creds) {
 function stringifyInfo(result) {
     return [
         `Title:     ${result.doc.title}`,
-        `Id:        ${result.doc.id}`,
+        `Id:        ${result.doc.spreadsheetId}`,
         (result.sheet ?
         `Sheet:     ${result.sheet.title}` : null),
-        `Author:    ${result.doc.author.name} - ${result.doc.author.email}`,
-        `Updated:   ${result.doc.updated}`
+        //`Author:    ${result.doc.author.name} - ${result.doc.author.email}`,
+        //`Updated:   ${result.doc.updated}`
     ].filter(s=>s !== null).join('\n');
     
 }

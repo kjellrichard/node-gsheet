@@ -43,6 +43,6 @@ describe('merge', () => {
 describe('file merge', () => {
     it('should read data from file', async () => {
         const r = await merge(Object.assign({}, config, { csvFile: __dirname + '/people.csv' }));
-        expect(r).to.not.be(null);
+        expect(r).to.have.property('doc');
     })
 })
