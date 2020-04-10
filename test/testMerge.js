@@ -2,8 +2,7 @@ const { expect, should } = require('chai');
 const { merge, getRows } = require('../lib/gsheet');
 const config = {
     creds: require('../.cred/spreadsheet-test-4ce4a41fdfa9.json'),
-    spreadsheetId: '1dk8k4L30_2UJdvfkTw7bw2FD6RGaooVPLMTt7-CMdKw',
-    keyField: 'name'
+    spreadsheetId: '1dk8k4L30_2UJdvfkTw7bw2FD6RGaooVPLMTt7-CMdKw'
 }
 async function sleep(ms) {
     return new Promise(resolve => { 

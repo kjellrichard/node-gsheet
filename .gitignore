@@ -101,6 +101,7 @@ dist
 .dynamodb/
 
 .cred
+service_account.json
 
 # TernJS port file
 .tern-port
