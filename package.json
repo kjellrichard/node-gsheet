@@ -5,6 +5,7 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
+	"declaration:build": "rm -f index.d.ts && tsc -p declaration.tsconfig.json",
     "test": "mocha --exit --timeout 30000 --recursive ./test/**/test*",
     "pkg": "pkg . -t node12-win --output ./bin/gsheet.exe"
   },
