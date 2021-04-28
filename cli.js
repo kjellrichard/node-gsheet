@@ -24,7 +24,8 @@ function stringifyInfo(result) {
 }
 
 function stringifyMergeDetails(result) {
-    const modified = result.modified.map(cell => `[${cell.col.toString().padStart(2, ' ')},${cell.row.toString().padStart(3, ' ')}] ${cell.oldValue} -> ${cell.value}`);
+    console.dir(result);
+    const modified = result.modified.map(cell => `${cell.a1Address.padStart(6, ' ')}: ${cell.oldValue} -> ${cell.value}`);
     const added = result.added.map(row => JSON.stringify(row));
     const deleted = result.deleted.map(row => JSON.stringify(row));
     return [
@@ -33,7 +34,7 @@ function stringifyMergeDetails(result) {
         `-- Added (${added.length}) --`,
         ...added,
         `-- Deleted (${deleted.length}) --`,
-        ...deleted,].join('\n');
+        ...deleted].join('\n');
 }
 
 function stringifyMergeSummary(result) {

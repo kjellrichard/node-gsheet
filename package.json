@@ -1,22 +1,24 @@
 {
   "name": "node-gsheet",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Handy functions for reading and merging data into Google Spreadsheet",
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-	"declaration:build": "rm -f index.d.ts && tsc -p declaration.tsconfig.json",
+    "declaration:build": "rm -f index.d.ts && tsc -p declaration.tsconfig.json",
     "test": "mocha --exit --timeout 30000 --recursive ./test/**/test*",
-    "pkg": "pkg . -t node12-win --output ./bin/gsheet.exe"
+    "pkg": "pkg . -t node16-win --output ./bin/gsheet.exe"
   },
   "author": "Richard B",
   "license": "MIT",
   "dependencies": {
-    "google-spreadsheet": "^3.0.10"
+    "google-spreadsheet": "^3.0.10",
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "yargs": "^15.0.2"
+    "mocha": "^8.3.2",
+    "pkg": "^5.1.0"
   },
   "directories": {
     "lib": "lib",
